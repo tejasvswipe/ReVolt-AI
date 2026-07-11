@@ -78,7 +78,7 @@
 
     /* Gradient text */
     .text-gradient {
-      background: linear-gradient(135deg, #34D399 0%, #60A5FA 50%, #38BDF8 100%);
+      background: linear-gradient(135deg, #0a1552 0%, #60A5FA 50%, #38BDF8 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -1535,15 +1535,44 @@
     const form = document.getElementById('contactForm');
     const toast = document.getElementById('toast');
     let toastTimer = null;
-    form.addEventListener('submit', (e) => {
-      e.preventDefault();
-      const data = Object.fromEntries(new FormData(form));
-      console.log('Waitlist submission:', data);
-      form.reset();
-      toast.classList.add('show');
+  form.addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const data = Object.fromEntries(new FormData(form));
+
+  try {
+    const response = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+
+    if (!response.ok) {
+      throw new Error("Submission failed");
+    }
+
+    form.reset();
+    toast.classList.add("show");
+
+  } catch (error) {
+    console.error(error);
+    alert("Something went wrong. Try again.");
+  };
+
+    if (!response.ok) {
+      throw new Error("Submission failed");
+    }
+
+    form.reset();
+    toast.classList.add("show");
+  } catch (err) {
+    alert("Something went wrong. Please try again.");
+    console.error(err);
+  }
       clearTimeout(toastTimer);
       toastTimer = setTimeout(() => toast.classList.remove('show'), 4000);
-    });
 
     // Re-render icons after dynamic content
     window.addEventListener('load', () => lucide.createIcons());
