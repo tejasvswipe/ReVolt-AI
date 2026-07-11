@@ -1,4 +1,4 @@
-# ReVolt AI — Landing Page
+# ReVolt AI 
 
 A premium, read-only MVP validation website for **ReVolt AI**, an AI-powered e-waste management and secure data destruction startup in India.
 
