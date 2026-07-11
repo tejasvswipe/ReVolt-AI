@@ -1535,44 +1535,34 @@
     const form = document.getElementById('contactForm');
     const toast = document.getElementById('toast');
     let toastTimer = null;
-  form.addEventListener('submit', async (e) => {
-  e.preventDefault();
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
 
-  const data = Object.fromEntries(new FormData(form));
+      const data = Object.fromEntries(new FormData(form));
 
-  try {
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
+      try {
+        const response = await fetch("/api/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        });
 
-    if (!response.ok) {
-      throw new Error("Submission failed");
-    }
+        if (!response.ok) {
+          throw new Error("Submission failed");
+        }
 
-    form.reset();
-    toast.classList.add("show");
+        form.reset();
+        toast.classList.add("show");
+      } catch (err) {
+        console.error(err);
+        alert("Something went wrong. Please try again.");
+      }
 
-  } catch (error) {
-    console.error(error);
-    alert("Something went wrong. Try again.");
-  };
-
-    if (!response.ok) {
-      throw new Error("Submission failed");
-    }
-
-    form.reset();
-    toast.classList.add("show");
-  } catch (err) {
-    alert("Something went wrong. Please try again.");
-    console.error(err);
-  }
       clearTimeout(toastTimer);
       toastTimer = setTimeout(() => toast.classList.remove('show'), 4000);
+    });
 
     // Re-render icons after dynamic content
     window.addEventListener('load', () => lucide.createIcons());
