@@ -33,3 +33,5 @@ build/
 
 # Generated artifacts (re-renderable)
 screenshot-*.png
+.next
+/next
