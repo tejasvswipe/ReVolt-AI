@@ -1,24 +1,35 @@
 {
   "name": "revolt-ai",
-  "version": "1.0.0",
-  "description": "A premium, read-only MVP validation website for **ReVolt AI**, an AI-powered e-waste management and secure data destruction startup in India.",
-  "main": "index.js",
+  "version": "2.0.0",
+  "private": true,
+  "description": "ReVolt AI — B2B e-waste and IT asset disposition marketing site",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/tejasvswipe/ReVolt-AI.git"
   },
-  "keywords": [],
-  "author": "",
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/tejasvswipe/ReVolt-AI/issues"
-  },
-  "homepage": "https://github.com/tejasvswipe/ReVolt-AI#readme",
   "dependencies": {
-    "@supabase/supabase-js": "^2.110.2"
+    "@supabase/supabase-js": "^2.110.2",
+    "framer-motion": "^12.23.12",
+    "next": "^15.5.4",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1"
+  },
+  "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.13",
+    "@types/node": "^24.3.1",
+    "@types/react": "^19.1.12",
+    "@types/react-dom": "^19.1.9",
+    "eslint": "^9.35.0",
+    "eslint-config-next": "^15.5.4",
+    "postcss": "^8.5.6",
+    "tailwindcss": "^4.1.13",
+    "typescript": "^5.9.2"
   }
 }
