@@ -35,3 +35,4 @@ build/
 screenshot-*.png
 .next
 /next
+.next/*
