@@ -57,9 +57,9 @@ const benefits = [
 ];
 
 const stats = [
-  { value: "48hr", label: "Average custody-to-report turnaround" },
-  { value: "100%", label: "Per-serial wipe certificates" },
-  { value: "7yr", label: "Audit record retention option" },
+  { value: "Target: 48hr custody-to-report turnaround", label: "Average custody-to-report turnaround" },
+  { value: "Goal: 100% per-serial wipe certificates", label: "Per-serial wipe certificates" },
+  { value:  "Planned: 7yr audit record retention", label: "Audit record retention option" },
 ];
 
 export default function ForEnterprises() {

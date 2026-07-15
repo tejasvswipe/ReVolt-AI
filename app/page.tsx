@@ -82,19 +82,36 @@ export default function Home() {
                 <li>
                   Email:{" "}
                   <a
-                    href="mailto:compliance@revolt.ai"
+                    href="mailto:team.revoltai4ewaste@gmail.com"
                     className="underline decoration-copper/30 underline-offset-2 transition-colors hover:text-ink hover:decoration-copper"
                   >
-                    compliance@revolt.ai
+                    team.revoltai4ewaste@gmail.com
                   </a>
                 </li>
                 <li>
                   Phone:{" "}
                   <a
-                    href="tel:+918049123456"
+                    href="tel:+918445863004"
                     className="underline decoration-copper/30 underline-offset-2 transition-colors hover:text-ink hover:decoration-copper"
                   >
-                    +91 80 4912 3456
+                    +91 8445863004
+                  </a>
+                </li>
+                <li>
+                 whatsapp:{" "}
+                  <a
+                    href="https://wa.me/918218994010"
+                    className="underline decoration-copper/30 underline-offset-2 transition-colors hover:text-ink hover:decoration-copper"
+                  >
+                    click here to chat
+                  </a>
+                </li>
+                <li> linkedin:{" "}
+                  <a
+                    href="https://www.linkedin.com/company/revolt-ai"
+                    className="underline decoration-copper/30 underline-offset-2 transition-colors hover:text-ink hover:decoration-copper"
+                  >
+                    linkedin.com/company/revolt-ai
                   </a>
                 </li>
               </ul>
@@ -137,10 +154,10 @@ export default function Home() {
           {/* Bottom bar */}
           <div className="mt-10 flex flex-col gap-2 border-t border-ink/8 pt-6 sm:flex-row sm:items-center sm:justify-between">
             <p className="font-display text-[11px] text-steel">
-              © {year} ReVolt AI. All rights reserved. Ref: RVLT-WEB-{year}-v2
+              © 2026 ReVolt AI. All rights reserved. Ref: RVLT-WEB-2026
             </p>
-            <p className="font-display text-[11px] text-steel">
-              ISO 27001-Aligned · NIST 800-88 · DPDP Act Ready
+            <p className="font-display text-[16px] text-steel">
+              "ISO 27001-Aligned · NIST 800-88 · DPDP Act Ready" → "Building toward ISO 27001 · NIST 800-88 aligned · DPDP Act aware"
             </p>
           </div>
         </div>
