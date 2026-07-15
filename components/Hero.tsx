@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import { useMotionSafe, stampVariants } from "@/lib/motion";
 
 const manifestLines = [
-  { label: "Device model", value: "Dell Latitude 7420 × 48 units" },
-  { label: "Wipe certification", value: "NIST 800-88 Rev. 1 — 2026-07-14 09:41 IST" },
+  { label: "Device model", value: "Dell Latitude 7420 × 23 units" },
+  { label: "Receiving", value: "certification completed as per company policy" },
   { label: "Recycler handoff", value: "Licensed partner #MH-REC-2847" },
   { label: "Report ID", value: "RVLT-2026-07-14-004821" },
 ];
@@ -71,10 +71,12 @@ export default function Hero() {
             </p>
             <p className="mt-1 font-display text-lg font-semibold text-ink">
               Batch #RVLT-2026-07-14
+            </p><p className="font-display text-xs uppercase tracking-widest text-steel">
+              Illustrative example — not an actual transaction
             </p>
           </div>
           <span className="inline-flex items-center gap-1.5 rounded-full bg-ink/5 px-2.5 py-1 text-xs font-medium text-ink">
-            <span
+            <span 
               className="h-2 w-2 animate-pulse rounded-full bg-signal"
               aria-hidden="true"
             />
@@ -108,7 +110,7 @@ export default function Hero() {
         <motion.p
           className="stamp-mark mt-6 border-t border-dashed border-ink/15 pt-4 text-xs text-steel"
           initial={shouldAnimate ? { opacity: 0 } : { opacity: 1 }}
-          animate={{ opacity: 1 }}
+          animate={{ opacity: 2 }}
           transition={{ delay: shouldAnimate ? 1.25 : 0, duration: 0.4 }}
         >
           Generated for audit retention · Immutable record · Do not discard

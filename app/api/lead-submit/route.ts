@@ -1,38 +1,65 @@
 import { NextRequest, NextResponse } from "next/server";
+import { createClient } from "@supabase/supabase-js";
 import { validateLeadPayload } from "@/lib/lead-validation";
+
+const supabase = createClient(
+  process.env.NEXT_PUBLIC_SUPABASE_URL!,
+  process.env.SUPABASE_SERVICE_ROLE_KEY!
+);
 
 export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
-    
-    // Server-side validation
+
+    // Validate request
     const validation = validateLeadPayload(body);
-    
-    if (!validation.valid) {
+
+    if (!validation.valid || !validation.data) {
       return NextResponse.json(
         { errors: validation.errors },
         { status: 400 }
       );
     }
-    
-    // Log the payload to server output as requested
-    console.log("----------------------------------------");
-    console.log("NEW LEAD SUBMISSION RECEIVED:");
-    console.log("Company Name: ", validation.data?.companyName);
-    console.log("Authorized Signatory: ", validation.data?.yourName);
-    console.log("Email: ", validation.data?.workEmail);
-    console.log("Phone: ", validation.data?.phoneNumber);
-    console.log("Company Size: ", validation.data?.companySize);
-    console.log("City: ", validation.data?.city);
-    console.log("Retirement Volume: ", validation.data?.deviceCount || "N/A");
-    console.log("Additional Details: ", validation.data?.additionalDetails || "N/A");
-    console.log("----------------------------------------");
 
-    return NextResponse.json({ success: true });
+    // Save lead to Supabase
+    const { error } = await supabase
+      .from("leads")
+      .insert({
+        company_name: validation.data.companyName,
+        your_name: validation.data.yourName,
+        work_email: validation.data.workEmail,
+        phone_number: validation.data.phoneNumber,
+        company_size: validation.data.companySize,
+        city: validation.data.city,
+        device_count: validation.data.deviceCount,
+        additional_details: validation.data.additionalDetails,
+      });
+
+    if (error) {
+      console.error("Supabase Error:", error);
+
+      return NextResponse.json(
+        {
+          success: false,
+          error: "Failed to save lead.",
+        },
+        { status: 500 }
+      );
+    }
+
+    return NextResponse.json({
+      success: true,
+      message: "Lead submitted successfully.",
+    });
+
   } catch (error) {
-    console.error("Error processing lead submission API:", error);
+    console.error("API Error:", error);
+
     return NextResponse.json(
-      { error: "Invalid payload or bad request." },
+      {
+        success: false,
+        error: "Invalid request.",
+      },
       { status: 400 }
     );
   }

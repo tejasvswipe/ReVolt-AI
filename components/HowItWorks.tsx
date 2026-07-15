@@ -24,7 +24,7 @@ const steps = [
     stamp: "WIPED",
     title: "Certified data destruction",
     detail:
-      "Each drive is wiped to NIST 800-88 standards. Certificates are tied to serial numbers, not batch guesses.",
+      "Each drive will be wiped to NIST 800-88 guidelines. Certificates are designed to tie to serial numbers, not batch guesses."
   },
   {
     id: "report",
@@ -38,8 +38,7 @@ const steps = [
     stamp: "HANDOFF",
     title: "Licensed recycler transfer",
     detail:
-      "Devices move only to pre-verified recyclers. Handoff records include license numbers and transfer timestamps.",
-  },
+       "Devices will move only to verified recyclers. Handoff records are designed to include license numbers and transfer timestamps, later on we will start our own unit"}
 ];
 
 export default function HowItWorks() {

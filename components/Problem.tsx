@@ -72,9 +72,7 @@ export default function Problem() {
             <line x1="12" y1="16" x2="12.01" y2="16" />
           </svg>
           <p className="text-sm text-ink/70">
-            Under India&apos;s DPDP Act and enterprise information security policies,
-            data controllers are accountable for personal data on disposed devices.
-            &ldquo;The vendor handled it&rdquo; is not a defence without a signed chain-of-custody record.
+            Under India&apos;s DPDP Act, data controllers remain accountable for personal data on disposed devices. A signed chain-of-custody record is designed to support that accountability
           </p>
         </div>
       </div>

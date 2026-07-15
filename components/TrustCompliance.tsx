@@ -79,7 +79,7 @@ export default function TrustCompliance() {
             </h2>
             <p className="mt-3 text-steel">
               Every item in this dossier maps to a real document. Nothing here
-              is a marketing promise.
+              is a marketing , promise.
             </p>
           </div>
           <a
