@@ -174,7 +174,7 @@ export default function KioskSection() {
             transition={{ duration: 0.60, ease: [0.16, 1, 0.3, 1] }}
           >
             <Image
-              src="/kiosk.jpg"
+              src="/kiosk.png"
               alt="ReVolt AI wide secure e-waste retirement station — a graphite wide-format cabinet with HD camera, compliance manifest touchscreen, and wide device intake slot"
               width={1200}
               height={800}
