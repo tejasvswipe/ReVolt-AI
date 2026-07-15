@@ -108,10 +108,10 @@ export default function Home() {
                 </li>
                 <li> linkedin:{" "}
                   <a
-                    href="https://www.linkedin.com/company/revolt-ai"
+                    href="https://www.linkedin.com/company/revoltindia"
                     className="underline decoration-copper/30 underline-offset-2 transition-colors hover:text-ink hover:decoration-copper"
                   >
-                    linkedin.com/company/revolt-ai
+                    linkedin.com/company/revoltindia 
                   </a>
                 </li>
               </ul>

@@ -36,3 +36,8 @@ screenshot-*.png
 .next
 /next
 .next/*
+.next/dev
+more/
+next.config.js
+next-env.d.ts
+next.config.mjs
