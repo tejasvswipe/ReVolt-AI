@@ -8,9 +8,11 @@ __turbopack_context__.s([
 ]);
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react-jsx-dev-runtime.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/dist/server/route-modules/app-page/vendored/ssr/react.js [app-ssr] (ecmascript)");
+var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/next/image.js [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/render/components/motion/proxy.mjs [app-ssr] (ecmascript)");
 var __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__ = __turbopack_context__.i("[project]/node_modules/framer-motion/dist/es/components/AnimatePresence/index.mjs [app-ssr] (ecmascript)");
 "use client";
+;
 ;
 ;
 ;
@@ -42,23 +44,24 @@ function Nav() {
                 "aria-label": "Main navigation",
                 children: [
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
-                        href: "#",
-                        className: "font-display text-sm font-semibold tracking-tight text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper",
-                        children: [
-                            "ReVolt",
-                            /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
-                                className: "text-copper",
-                                children: "AI"
-                            }, void 0, false, {
-                                fileName: "[project]/components/Nav.tsx",
-                                lineNumber: 27,
-                                columnNumber: 17
-                            }, this)
-                        ]
-                    }, void 0, true, {
+                        href: "/",
+                        className: "flex items-center transition-opacity hover:opacity-90",
+                        children: /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$image$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["default"], {
+                            src: "/revoltai_logo.png",
+                            alt: "ReVolt AI",
+                            width: 180,
+                            height: 50,
+                            priority: true,
+                            className: "h-10 w-auto md:h-12"
+                        }, void 0, false, {
+                            fileName: "[project]/components/Nav.tsx",
+                            lineNumber: 28,
+                            columnNumber: 3
+                        }, this)
+                    }, void 0, false, {
                         fileName: "[project]/components/Nav.tsx",
-                        lineNumber: 23,
-                        columnNumber: 9
+                        lineNumber: 24,
+                        columnNumber: 1
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ul", {
                         className: "hidden items-center gap-8 md:flex",
@@ -69,17 +72,17 @@ function Nav() {
                                     children: link.label
                                 }, void 0, false, {
                                     fileName: "[project]/components/Nav.tsx",
-                                    lineNumber: 34,
+                                    lineNumber: 42,
                                     columnNumber: 15
                                 }, this)
                             }, link.href, false, {
                                 fileName: "[project]/components/Nav.tsx",
-                                lineNumber: 33,
+                                lineNumber: 41,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/Nav.tsx",
-                        lineNumber: 31,
+                        lineNumber: 39,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -88,7 +91,7 @@ function Nav() {
                         children: "Request a pilot"
                     }, void 0, false, {
                         fileName: "[project]/components/Nav.tsx",
-                        lineNumber: 45,
+                        lineNumber: 53,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("button", {
@@ -107,7 +110,7 @@ function Nav() {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Nav.tsx",
-                                lineNumber: 61,
+                                lineNumber: 69,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("svg", {
@@ -127,7 +130,7 @@ function Nav() {
                                             y2: "14"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Nav.tsx",
-                                            lineNumber: 73,
+                                            lineNumber: 81,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -137,7 +140,7 @@ function Nav() {
                                             y2: "14"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Nav.tsx",
-                                            lineNumber: 74,
+                                            lineNumber: 82,
                                             columnNumber: 17
                                         }, this)
                                     ]
@@ -150,7 +153,7 @@ function Nav() {
                                             y2: "4"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Nav.tsx",
-                                            lineNumber: 78,
+                                            lineNumber: 86,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -160,7 +163,7 @@ function Nav() {
                                             y2: "8"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Nav.tsx",
-                                            lineNumber: 79,
+                                            lineNumber: 87,
                                             columnNumber: 17
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("line", {
@@ -170,26 +173,26 @@ function Nav() {
                                             y2: "12"
                                         }, void 0, false, {
                                             fileName: "[project]/components/Nav.tsx",
-                                            lineNumber: 80,
+                                            lineNumber: 88,
                                             columnNumber: 17
                                         }, this)
                                     ]
                                 }, void 0, true)
                             }, void 0, false, {
                                 fileName: "[project]/components/Nav.tsx",
-                                lineNumber: 62,
+                                lineNumber: 70,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Nav.tsx",
-                        lineNumber: 53,
+                        lineNumber: 61,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/Nav.tsx",
-                lineNumber: 18,
+                lineNumber: 19,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$components$2f$AnimatePresence$2f$index$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["AnimatePresence"], {
@@ -228,12 +231,12 @@ function Nav() {
                                         children: link.label
                                     }, void 0, false, {
                                         fileName: "[project]/components/Nav.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 109,
                                         columnNumber: 19
                                     }, this)
                                 }, link.href, false, {
                                     fileName: "[project]/components/Nav.tsx",
-                                    lineNumber: 100,
+                                    lineNumber: 108,
                                     columnNumber: 17
                                 }, this)),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("li", {
@@ -245,34 +248,34 @@ function Nav() {
                                     children: "Request a pilot"
                                 }, void 0, false, {
                                     fileName: "[project]/components/Nav.tsx",
-                                    lineNumber: 111,
+                                    lineNumber: 119,
                                     columnNumber: 17
                                 }, this)
                             }, void 0, false, {
                                 fileName: "[project]/components/Nav.tsx",
-                                lineNumber: 110,
+                                lineNumber: 118,
                                 columnNumber: 15
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/components/Nav.tsx",
-                        lineNumber: 98,
+                        lineNumber: 106,
                         columnNumber: 13
                     }, this)
                 }, void 0, false, {
                     fileName: "[project]/components/Nav.tsx",
-                    lineNumber: 90,
+                    lineNumber: 98,
                     columnNumber: 11
                 }, this)
             }, void 0, false, {
                 fileName: "[project]/components/Nav.tsx",
-                lineNumber: 88,
+                lineNumber: 96,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/Nav.tsx",
-        lineNumber: 17,
+        lineNumber: 18,
         columnNumber: 5
     }, this);
 }
@@ -378,11 +381,11 @@ var __TURBOPACK__imported__module__$5b$project$5d2f$lib$2f$motion$2e$ts__$5b$app
 const manifestLines = [
     {
         label: "Device model",
-        value: "Dell Latitude 7420 × 48 units"
+        value: "Dell Latitude 7420 × 23 units"
     },
     {
-        label: "Wipe certification",
-        value: "NIST 800-88 Rev. 1 — 2026-07-14 09:41 IST"
+        label: "Receiving",
+        value: "certification completed as per company policy"
     },
     {
         label: "Recycler handoff",
@@ -488,6 +491,14 @@ function Hero() {
                                         fileName: "[project]/components/Hero.tsx",
                                         lineNumber: 72,
                                         columnNumber: 13
+                                    }, this),
+                                    /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
+                                        className: "font-display text-xs uppercase tracking-widest text-steel",
+                                        children: "Illustrative example — not an actual transaction"
+                                    }, void 0, false, {
+                                        fileName: "[project]/components/Hero.tsx",
+                                        lineNumber: 74,
+                                        columnNumber: 17
                                     }, this)
                                 ]
                             }, void 0, true, {
@@ -503,14 +514,14 @@ function Hero() {
                                         "aria-hidden": "true"
                                     }, void 0, false, {
                                         fileName: "[project]/components/Hero.tsx",
-                                        lineNumber: 77,
+                                        lineNumber: 79,
                                         columnNumber: 13
                                     }, this),
                                     "Certified"
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 76,
+                                lineNumber: 78,
                                 columnNumber: 11
                             }, this)
                         ]
@@ -535,7 +546,7 @@ function Hero() {
                                         children: line.label
                                     }, void 0, false, {
                                         fileName: "[project]/components/Hero.tsx",
-                                        lineNumber: 98,
+                                        lineNumber: 100,
                                         columnNumber: 15
                                     }, this),
                                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("dd", {
@@ -543,18 +554,18 @@ function Hero() {
                                         children: line.value
                                     }, void 0, false, {
                                         fileName: "[project]/components/Hero.tsx",
-                                        lineNumber: 101,
+                                        lineNumber: 103,
                                         columnNumber: 15
                                     }, this)
                                 ]
                             }, line.label, true, {
                                 fileName: "[project]/components/Hero.tsx",
-                                lineNumber: 88,
+                                lineNumber: 90,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/components/Hero.tsx",
-                        lineNumber: 86,
+                        lineNumber: 88,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].p, {
@@ -565,7 +576,7 @@ function Hero() {
                             opacity: 1
                         },
                         animate: {
-                            opacity: 1
+                            opacity: 2
                         },
                         transition: {
                             delay: shouldAnimate ? 1.25 : 0,
@@ -574,7 +585,7 @@ function Hero() {
                         children: "Generated for audit retention · Immutable record · Do not discard"
                     }, void 0, false, {
                         fileName: "[project]/components/Hero.tsx",
-                        lineNumber: 108,
+                        lineNumber: 110,
                         columnNumber: 9
                     }, this)
                 ]
@@ -625,7 +636,7 @@ const steps = [
         id: "wipe",
         stamp: "WIPED",
         title: "Certified data destruction",
-        detail: "Each drive is wiped to NIST 800-88 standards. Certificates are tied to serial numbers, not batch guesses."
+        detail: "Each drive will be wiped to NIST 800-88 guidelines. Certificates are designed to tie to serial numbers, not batch guesses."
     },
     {
         id: "report",
@@ -637,7 +648,7 @@ const steps = [
         id: "recycler",
         stamp: "HANDOFF",
         title: "Licensed recycler transfer",
-        detail: "Devices move only to pre-verified recyclers. Handoff records include license numbers and transfer timestamps."
+        detail: "Devices will move only to verified recyclers. Handoff records are designed to include license numbers and transfer timestamps, later on we will start our own unit"
     }
 ];
 function HowItWorks() {
@@ -660,7 +671,7 @@ function HowItWorks() {
                 children: "How the audit trail is built"
             }, void 0, false, {
                 fileName: "[project]/components/HowItWorks.tsx",
-                lineNumber: 59,
+                lineNumber: 58,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -668,7 +679,7 @@ function HowItWorks() {
                 children: "Each entry stamps in as custody passes — the same order your compliance team expects to see in a review."
             }, void 0, false, {
                 fileName: "[project]/components/HowItWorks.tsx",
-                lineNumber: 65,
+                lineNumber: 64,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("ol", {
@@ -679,7 +690,7 @@ function HowItWorks() {
                         "aria-hidden": "true"
                     }, void 0, false, {
                         fileName: "[project]/components/HowItWorks.tsx",
-                        lineNumber: 72,
+                        lineNumber: 71,
                         columnNumber: 9
                     }, this),
                     steps.map((step, index)=>/*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])(__TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$framer$2d$motion$2f$dist$2f$es$2f$render$2f$components$2f$motion$2f$proxy$2e$mjs__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["motion"].li, {
@@ -696,7 +707,7 @@ function HowItWorks() {
                                     children: index + 1
                                 }, void 0, false, {
                                     fileName: "[project]/components/HowItWorks.tsx",
-                                    lineNumber: 87,
+                                    lineNumber: 86,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -708,7 +719,7 @@ function HowItWorks() {
                                             children: step.stamp
                                         }, void 0, false, {
                                             fileName: "[project]/components/HowItWorks.tsx",
-                                            lineNumber: 93,
+                                            lineNumber: 92,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -716,7 +727,7 @@ function HowItWorks() {
                                             children: step.title
                                         }, void 0, false, {
                                             fileName: "[project]/components/HowItWorks.tsx",
-                                            lineNumber: 99,
+                                            lineNumber: 98,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2d$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -724,31 +735,31 @@ function HowItWorks() {
                                             children: step.detail
                                         }, void 0, false, {
                                             fileName: "[project]/components/HowItWorks.tsx",
-                                            lineNumber: 102,
+                                            lineNumber: 101,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/components/HowItWorks.tsx",
-                                    lineNumber: 92,
+                                    lineNumber: 91,
                                     columnNumber: 13
                                 }, this)
                             ]
                         }, step.id, true, {
                             fileName: "[project]/components/HowItWorks.tsx",
-                            lineNumber: 78,
+                            lineNumber: 77,
                             columnNumber: 11
                         }, this))
                 ]
             }, void 0, true, {
                 fileName: "[project]/components/HowItWorks.tsx",
-                lineNumber: 70,
+                lineNumber: 69,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/components/HowItWorks.tsx",
-        lineNumber: 53,
+        lineNumber: 52,
         columnNumber: 5
     }, this);
 }

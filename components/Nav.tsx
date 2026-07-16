@@ -26,7 +26,7 @@ export default function Nav() {
   className="flex items-center transition-opacity hover:opacity-90"
 >
   <Image
-    src="/logo.png"
+    src="/revoltai_logo.png"
     alt="ReVolt AI"
     width={180}
     height={50}
