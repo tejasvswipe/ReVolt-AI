@@ -5,18 +5,18 @@
 ========================= */
 
 @theme {
-  --color-paper: #171310 ;
-  --color-surface: #211B16 ;
-  --color-surface-2: #2A2119 ;
+  --color-paper: #15110D;
+  --color-surface: #1F1811;
+  --color-surface-2: #2A2016;
 
-  --color-ink: #F8F6F3;
-  --color-steel: #C9BEB2;
-  --color-muted: #8F8478;
+  --color-ink: #F7F2EA;
+  --color-steel: #A99483;
+  --color-muted: #786655;
 
   --color-copper: #C2703A;
   --color-copper-hover: #A85A2A;
 
-  --color-border: #3A2E24;
+  --color-border: #3D2E22;
 
   --font-display: var(--font-ibm-plex-mono);
   --font-body: var(--font-public-sans);
@@ -66,8 +66,8 @@ body::before {
 
     linear-gradient(
       180deg,
-      #171310 0%,
-      #100D0A 100%
+      #15110D 0%,
+      #0E0B08 100%
     );
 }
 
@@ -76,11 +76,11 @@ body::before {
 ========================= */
 
 .glass-nav{
-  background:rgba(23,19,16,.82);
+  background:rgba(21,17,13,.82);
   backdrop-filter:blur(18px);
   -webkit-backdrop-filter:blur(18px);
 
-  border-bottom:1px solid rgba(58,46,36,.7);
+  border-bottom:1px solid rgba(61,46,34,.7);
 }
 
 /* =========================
@@ -125,7 +125,7 @@ body::before {
 ========================= */
 
 .manifest-line{
-  border-bottom:1px solid rgba(58,46,36,.55);
+  border-bottom:1px solid rgba(61,46,34,.55);
   transition:.2s;
 }
 
@@ -201,7 +201,7 @@ select:focus{
 
 ::selection{
   background:#C2703A;
-  color:#171310;
+  color:#15110D;
 }
 
 /* =========================
@@ -213,16 +213,16 @@ select:focus{
 }
 
 ::-webkit-scrollbar-track{
-  background:#100D0A;
+  background:#0E0B08;
 }
 
 ::-webkit-scrollbar-thumb{
-  background:#3A2E24;
+  background:#3D2E22;
   border-radius:999px;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-  background:#5A4736;
+  background:#5C4634;
 }
 
 /* =========================
