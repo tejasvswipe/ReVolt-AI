@@ -227,3 +227,45 @@ select:focus{
 
 ::selection{
   background:var(--color-copper);
+  color:var(--color-on-copper);
+}
+
+/* =========================
+   SCROLLBAR — neutral
+========================= */
+
+::-webkit-scrollbar{
+  width:10px;
+}
+
+::-webkit-scrollbar-track{
+  background:#0E0B08;
+}
+
+::-webkit-scrollbar-thumb{
+  background:#3D2E22;
+  border-radius:999px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background:#5C4634;
+}
+
+/* =========================
+   REDUCED MOTION
+========================= */
+
+@media(prefers-reduced-motion:reduce){
+
+  html{
+    scroll-behavior:auto;
+  }
+
+  *,
+  *::before,
+  *::after{
+    animation:none!important;
+    transition:none!important;
+  }
+
+}
