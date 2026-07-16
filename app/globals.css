@@ -4,10 +4,10 @@
    THEME TOKENS
 ========================= */
 
-@theme {
-  --color-paper: #15110D;
-  --color-surface: #1F1811;
-  --color-surface-2: #2A2016;
+ @theme{
+  --color-paper: #FCFFEE;      /* pale cream, not stark white */;
+  --color-surface: #FCE7D2;    /* pale peach, not stark white */;
+  --color-surface-2: #FCE0C9;   /* slightly darker peach, not stark white */;
 
   --color-ink: #EDE7DD;       /* pale white, not stark white */
   --color-steel: #A99483;
@@ -17,7 +17,7 @@
   --color-copper-hover: #D27F4A;
 
   /* text color to use whenever copper is the BACKGROUND, not the accent */
-  --color-on-copper: #15110D;
+  --color-on-copper: #000000;
 
   --color-border: #3D2E22;
 
@@ -60,11 +60,11 @@ body::before {
 
   background:
     radial-gradient(circle at top left,
-      rgba(194,112,58,.06),
+      rgba(241, 208, 186, 0.06),
       transparent 35%),
 
     radial-gradient(circle at bottom right,
-      rgba(194,112,58,.04),
+      rgba(255, 173, 97, 0.04),
       transparent 40%),
 
     linear-gradient(
