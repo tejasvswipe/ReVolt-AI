@@ -5,18 +5,18 @@
 ========================= */
 
 @theme {
-  --color-paper: #0B1C17;
-  --color-surface: #14231E;
-  --color-surface-2: #1A2D27;
+  --color-paper: #171310 ;
+  --color-surface: #211B16 ;
+  --color-surface-2: #2A2119 ;
 
-  --color-ink: #F8FAFC;
-  --color-steel: #C5D2CC;
-  --color-muted: #8EA39A;
+  --color-ink: #F8F6F3;
+  --color-steel: #C9BEB2;
+  --color-muted: #8F8478;
 
-  --color-copper: #22C55E;
-  --color-copper-hover: #16A34A;
+  --color-copper: #C2703A;
+  --color-copper-hover: #A85A2A;
 
-  --color-border: #2E4A40;
+  --color-border: #3A2E24;
 
   --font-display: var(--font-ibm-plex-mono);
   --font-body: var(--font-public-sans);
@@ -57,17 +57,17 @@ body::before {
 
   background:
     radial-gradient(circle at top left,
-      rgba(34,197,94,.10),
+      rgba(194,112,58,.10),
       transparent 35%),
 
     radial-gradient(circle at bottom right,
-      rgba(34,197,94,.06),
+      rgba(194,112,58,.06),
       transparent 40%),
 
     linear-gradient(
       180deg,
-      #0B1C17 0%,
-      #081612 100%
+      #171310 0%,
+      #100D0A 100%
     );
 }
 
@@ -76,11 +76,11 @@ body::before {
 ========================= */
 
 .glass-nav{
-  background:rgba(11,28,23,.82);
+  background:rgba(23,19,16,.82);
   backdrop-filter:blur(18px);
   -webkit-backdrop-filter:blur(18px);
 
-  border-bottom:1px solid rgba(46,74,64,.7);
+  border-bottom:1px solid rgba(58,46,36,.7);
 }
 
 /* =========================
@@ -125,12 +125,12 @@ body::before {
 ========================= */
 
 .manifest-line{
-  border-bottom:1px solid rgba(46,74,64,.55);
+  border-bottom:1px solid rgba(58,46,36,.55);
   transition:.2s;
 }
 
 .manifest-line:hover{
-  background:rgba(34,197,94,.05);
+  background:rgba(194,112,58,.06);
 }
 
 /* =========================
@@ -192,7 +192,7 @@ select:focus{
   border-color:var(--color-copper);
 
   box-shadow:
-    0 0 0 4px rgba(34,197,94,.15);
+    0 0 0 4px rgba(194,112,58,.15);
 }
 
 /* =========================
@@ -200,8 +200,8 @@ select:focus{
 ========================= */
 
 ::selection{
-  background:#22C55E;
-  color:#081612;
+  background:#C2703A;
+  color:#171310;
 }
 
 /* =========================
@@ -213,16 +213,16 @@ select:focus{
 }
 
 ::-webkit-scrollbar-track{
-  background:#081612;
+  background:#100D0A;
 }
 
 ::-webkit-scrollbar-thumb{
-  background:#2E4A40;
+  background:#3A2E24;
   border-radius:999px;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-  background:#3C6358;
+  background:#5A4736;
 }
 
 /* =========================
