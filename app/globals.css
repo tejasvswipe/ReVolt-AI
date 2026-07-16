@@ -14,7 +14,7 @@
   --color-muted: #786655;
 
   --color-copper: #C2703A;
-  --color-copper-hover: #A85A2A;
+  --color-copper-hover: #D27F4A;
 
   /* text color to use whenever copper is the BACKGROUND, not the accent */
   --color-on-copper: #15110D;
@@ -69,8 +69,8 @@ body::before {
 
     linear-gradient(
       180deg,
-      #15110D 0%,
-      #0E0B08 100%
+      #fcffee 0%,
+      #fce7d2 100%
     );
 }
 
@@ -79,7 +79,7 @@ body::before {
 ========================= */
 
 .glass-nav{
-  background:rgba(21,17,13,.82);
+  background:rgba(252, 238, 238, 0.82);
   backdrop-filter:blur(18px);
   -webkit-backdrop-filter:blur(18px);
 
@@ -239,16 +239,16 @@ select:focus{
 }
 
 ::-webkit-scrollbar-track{
-  background:#0E0B08;
+  background:#fce7d2;
 }
 
 ::-webkit-scrollbar-thumb{
-  background:#3D2E22;
+  background:#ffe5d0;
   border-radius:999px;
 }
 
 ::-webkit-scrollbar-thumb:hover{
-  background:#5C4634;
+  background:rgba(254, 209, 172, 0.837);
 }
 
 /* =========================
