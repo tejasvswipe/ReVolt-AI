@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 
 const links = [
@@ -20,12 +21,19 @@ export default function Nav() {
         aria-label="Main navigation"
       >
         {/* Logo */}
-        <a
-          href="#"
-          className="font-display text-sm font-semibold tracking-tight text-ink focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-copper"
-        >
-          ReVolt<span className="text-copper">AI</span>
-        </a>
+<a
+  href="/"
+  className="flex items-center transition-opacity hover:opacity-90"
+>
+  <Image
+    src="/logo.png"
+    alt="ReVolt AI"
+    width={180}
+    height={50}
+    priority
+    className="h-10 w-auto md:h-12"
+  />
+</a>
 
         {/* Desktop nav links */}
         <ul className="hidden items-center gap-8 md:flex">
