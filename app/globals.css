@@ -1,25 +1,58 @@
 @import "tailwindcss";
+
+/* ==========================================================
+   ReVolt AI Design System
+========================================================== */
+
 :root {
-  --color-ink: #1b1f1d;
-  --color-steel: #92bca0;
-  --color-paper: #f9f1bd;
-  --color-copper: #b5651d;
-  --color-signal: #ff9f1c;
+  /* Brand Colors */
+  --ink: #F8FAFC;
+  --steel: #94A3B8;
+  --paper: #0B1220;
+
+  --surface: #111827;
+  --surface-2: #1E293B;
+
+  --primary: #22C55E;
+  --secondary: #0EA5E9;
+  --accent: #38BDF8;
+
+  --border: rgba(255,255,255,.08);
+
+  /* Typography */
   --font-display: var(--font-ibm-plex-mono), ui-monospace, monospace;
   --font-body: var(--font-public-sans), ui-sans-serif, system-ui, sans-serif;
 }
 
-:root {
-  --ink: #1b1f1d;
-  --steel: #8b8f87;
-  --paper: #749591;
-  --copper: #b5651d;
-  --signal: #ff9f1c;
-}
+/* ==========================================================
+   Base
+========================================================== */
 
 html {
   scroll-behavior: smooth;
 }
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(34,197,94,.08), transparent 35%),
+    radial-gradient(circle at top right, rgba(14,165,233,.08), transparent 35%),
+    var(--paper);
+
+  color: var(--ink);
+  font-family: var(--font-body);
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background: rgba(34,197,94,.25);
+  color: white;
+}
+
+/* ==========================================================
+   Reduced Motion
+========================================================== */
 
 @media (prefers-reduced-motion: reduce) {
   html {
@@ -29,117 +62,183 @@ html {
   *,
   *::before,
   *::after {
-    animation-duration: 0.01ms !important;
+    animation-duration: .01ms !important;
     animation-iteration-count: 1 !important;
-    transition-duration: 0.01ms !important;
+    transition-duration: .01ms !important;
   }
 }
 
-body {
-  background-color: var(--paper);
-  color: var(--ink);
-  font-family: var(--font-body);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+/* ==========================================================
+   Glass Navigation
+========================================================== */
 
-/* ─── GLASSMORPHISM — nav only ─── */
 .glass-nav {
-  background: rgba(142, 159, 134, 0.8);
-  backdrop-filter: blur(20px) saturate(1.4);
-  -webkit-backdrop-filter: blur(20px) saturate(1.4);
-  border-bottom: 1px solid rgba(27, 31, 29, 0.08);
+  background: rgba(11,18,32,.78);
+  backdrop-filter: blur(18px) saturate(180%);
+  -webkit-backdrop-filter: blur(18px) saturate(180%);
+  border-bottom: 1px solid var(--border);
 }
 
-/* ─── NEUMORPHISM — small controls only (hamburger button) ─── */
+/* ==========================================================
+   Small Controls
+========================================================== */
+
 .neu-control {
-  background: var(--paper);
+  background: rgba(255,255,255,.04);
+
+  border: 1px solid var(--border);
+
+  color: white;
+
   box-shadow:
-    3px 3px 6px rgba(27, 31, 29, 0.10),
-    -3px -3px 6px rgba(255, 255, 255, 0.85);
-  border: 1px solid rgba(27, 31, 29, 0.05);
-  transition: box-shadow 150ms ease;
+    0 8px 30px rgba(0,0,0,.35);
+
+  transition:
+    transform .25s ease,
+    background .25s ease,
+    box-shadow .25s ease;
 }
 
 .neu-control:hover {
+  background: rgba(255,255,255,.08);
+  transform: translateY(-2px);
+
   box-shadow:
-    2px 2px 4px rgba(27, 31, 29, 0.12),
-    -2px -2px 4px rgba(255, 233, 233, 0.9);
+    0 14px 40px rgba(0,0,0,.4);
 }
 
 .neu-control:focus-visible {
-  outline: 2px solid var(--copper);
+  outline: 2px solid var(--primary);
   outline-offset: 2px;
 }
 
-/* ─── CLAYMORPHISM — icon badges only (ForEnterprises) ─── */
+/* ==========================================================
+   Enterprise Cards
+========================================================== */
+
 .clay-badge {
-  background: linear-gradient(145deg, #ebffe1 0%, #e2e5e1 100%);
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.06),
+      rgba(255,255,255,.03)
+    );
+
+  border: 1px solid var(--border);
+
+  border-radius: 24px;
+
   box-shadow:
-    inset 2px 2px 5px rgba(255, 255, 255, 0.85),
-    inset -2px -2px 5px rgba(27, 31, 29, 0.07),
-    5px 5px 14px rgba(27, 31, 29, 0.09);
-  border-radius: 1.125rem;
-  border: 1px solid rgba(255, 255, 255, 0.6);
+    0 12px 40px rgba(0,0,0,.28);
 }
 
-/* ─── MANIFEST DOCUMENT LINE ITEM — hover micro-interaction ─── */
+/* ==========================================================
+   Manifest Lines
+========================================================== */
+
 .manifest-line {
-  border-bottom: 1px solid rgba(27, 31, 29, 0.10);
+  border-bottom: 1px solid rgba(255,255,255,.08);
+
   transition:
-    background-color 180ms ease,
-    border-color 180ms ease;
+    background .25s ease,
+    border-color .25s ease;
 }
 
 .manifest-line:hover,
 .manifest-line:focus-within {
-  background-color: rgba(181, 101, 29, 0.035);
-  border-bottom-color: rgba(181, 101, 29, 0.30);
+  background: rgba(255,255,255,.03);
+  border-color: rgba(34,197,94,.25);
 }
 
 .manifest-line:last-child {
   border-bottom: none;
 }
 
-/* ─── BENTO GRID — TrustCompliance section ─── */
+/* ==========================================================
+   Bento Grid
+========================================================== */
+
 .bento-grid {
   display: grid;
-  gap: 0.875rem;
+  gap: 1rem;
   grid-template-columns: repeat(12, 1fr);
 }
 
-@media (max-width: 768px) {
+@media (max-width:768px) {
   .bento-grid {
     grid-template-columns: 1fr;
   }
 }
 
-/* ─── STAMP MARK typography helper ─── */
+/* ==========================================================
+   Typography
+========================================================== */
+
 .stamp-mark {
   font-family: var(--font-display);
-  letter-spacing: 0.02em;
+  letter-spacing: .08em;
+  text-transform: uppercase;
 }
 
-/* ─── Signal pulse (hero manifest badge) ─── */
+/* ==========================================================
+   Pulse
+========================================================== */
+
 @keyframes subtle-pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.45; }
+  0%,100% {
+    opacity:1;
+    transform:scale(1);
+  }
+
+  50% {
+    opacity:.55;
+    transform:scale(1.03);
+  }
 }
 
 .animate-pulse {
-  animation: subtle-pulse 2.2s ease-in-out infinite;
+  animation: subtle-pulse 2.4s ease-in-out infinite;
 }
 
-/* ─── Focus ring for form controls ─── */
+/* ==========================================================
+   Forms
+========================================================== */
+
+input,
+textarea,
+select {
+  background: rgba(255,255,255,.03);
+  border: 1px solid var(--border);
+  color: white;
+}
+
 input:focus-visible,
-select:focus-visible,
-textarea:focus-visible {
+textarea:focus-visible,
+select:focus-visible {
   outline: none;
-  box-shadow: 0 1px 0 0 var(--copper);
+  border-color: var(--primary);
+
+  box-shadow:
+    0 0 0 4px rgba(34,197,94,.18);
 }
 
-/* ─── Selection ─── */
-::selection {
-  background-color: rgba(181, 101, 29, 0.18);
-  color: var(--ink);
+/* ==========================================================
+   Scrollbar
+========================================================== */
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--paper);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
 }
