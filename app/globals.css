@@ -9,12 +9,15 @@
   --color-surface: #1F1811;
   --color-surface-2: #2A2016;
 
-  --color-ink: #F7F2EA;
+  --color-ink: #EDE7DD;       /* pale white, not stark white */
   --color-steel: #A99483;
   --color-muted: #786655;
 
   --color-copper: #C2703A;
   --color-copper-hover: #A85A2A;
+
+  /* text color to use whenever copper is the BACKGROUND, not the accent */
+  --color-on-copper: #15110D;
 
   --color-border: #3D2E22;
 
@@ -57,11 +60,11 @@ body::before {
 
   background:
     radial-gradient(circle at top left,
-      rgba(194,112,58,.10),
+      rgba(194,112,58,.06),
       transparent 35%),
 
     radial-gradient(circle at bottom right,
-      rgba(194,112,58,.06),
+      rgba(194,112,58,.04),
       transparent 40%),
 
     linear-gradient(
@@ -72,7 +75,7 @@ body::before {
 }
 
 /* =========================
-   NAVBAR
+   NAVBAR — neutral, no copper
 ========================= */
 
 .glass-nav{
@@ -84,7 +87,7 @@ body::before {
 }
 
 /* =========================
-   BUTTON
+   BUTTON — neutral by default
 ========================= */
 
 .neu-control{
@@ -99,15 +102,38 @@ body::before {
 
 .neu-control:hover{
   background:var(--color-surface-2);
+  border-color:var(--color-steel);
 }
 
 .neu-control:focus-visible{
-  outline:2px solid var(--color-copper);
+  outline:2px solid var(--color-steel);
+  outline-offset:2px;
+}
+
+/* Solid copper CTA — reserve for the ONE primary action per screen
+   (hero CTA, form submit). Text must be --color-on-copper. */
+.copper-fill{
+  background:var(--color-copper);
+  color:var(--color-on-copper);
+  border:1px solid var(--color-copper);
+
+  border-radius:12px;
+
+  transition:.25s ease;
+}
+
+.copper-fill:hover{
+  background:var(--color-copper-hover);
+  border-color:var(--color-copper-hover);
+}
+
+.copper-fill:focus-visible{
+  outline:2px solid var(--color-ink);
   outline-offset:2px;
 }
 
 /* =========================
-   BADGE
+   BADGE — neutral, no copper glow
 ========================= */
 
 .clay-badge{
@@ -121,7 +147,7 @@ body::before {
 }
 
 /* =========================
-   MANIFEST
+   MANIFEST — neutral hover, no copper tint
 ========================= */
 
 .manifest-line{
@@ -130,7 +156,7 @@ body::before {
 }
 
 .manifest-line:hover{
-  background:rgba(194,112,58,.06);
+  background:var(--color-surface);
 }
 
 /* =========================
@@ -160,7 +186,7 @@ body::before {
 }
 
 /* =========================
-   FORMS
+   FORMS — copper only on focus, the one moment it should pop
 ========================= */
 
 input,
@@ -196,50 +222,8 @@ select:focus{
 }
 
 /* =========================
-   SELECTION
+   SELECTION — copper background, black text
 ========================= */
 
 ::selection{
-  background:#C2703A;
-  color:#15110D;
-}
-
-/* =========================
-   SCROLLBAR
-========================= */
-
-::-webkit-scrollbar{
-  width:10px;
-}
-
-::-webkit-scrollbar-track{
-  background:#0E0B08;
-}
-
-::-webkit-scrollbar-thumb{
-  background:#3D2E22;
-  border-radius:999px;
-}
-
-::-webkit-scrollbar-thumb:hover{
-  background:#5C4634;
-}
-
-/* =========================
-   REDUCED MOTION
-========================= */
-
-@media(prefers-reduced-motion:reduce){
-
-  html{
-    scroll-behavior:auto;
-  }
-
-  *,
-  *::before,
-  *::after{
-    animation:none!important;
-    transition:none!important;
-  }
-
-}
+  background:var(--color-copper);
