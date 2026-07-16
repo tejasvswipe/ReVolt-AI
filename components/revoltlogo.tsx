@@ -7,7 +7,7 @@ export default function ReVoltLogo() {
   return (
     <Link href="/" className="inline-flex items-center">
       <Image
-        src="revoltai_logo.png"
+        src="/revoltai_logo.png"
         alt="ReVolt AI"
         width={220}
         height={70}
