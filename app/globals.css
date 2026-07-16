@@ -5,199 +5,132 @@
 ========================================================== */
 
 :root {
-  /* Brand Colors */
-  --ink: #F8FAFC;
-  --steel: #94A3B8;
-  --paper: #0B1220;
 
-  --surface: #111827;
-  --surface-2: #1E293B;
+  /* Brand */
+  --primary: #14532D;
+  --primary-hover: #166534;
 
-  --primary: #22C55E;
-  --secondary: #0EA5E9;
-  --accent: #38BDF8;
+  --accent: #B76E2B;
 
-  --border: rgba(255,255,255,.08);
+  /* Backgrounds */
+  --bg: #FAFAF9;
+  --surface: #FFFFFF;
+  --surface-muted: #F4F4F5;
 
   /* Typography */
+  --text: #18181B;
+  --text-muted: #71717A;
+
+  /* Borders */
+  --border: #E4E4E7;
+
+  /* Success */
+  --success: #16A34A;
+
+  /* Fonts */
   --font-display: var(--font-ibm-plex-mono), ui-monospace, monospace;
-  --font-body: var(--font-public-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-body: var(--font-public-sans), sans-serif;
+}
+
+/* ========================================================== */
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:var(--font-body);
+  -webkit-font-smoothing:antialiased;
 }
 
 /* ==========================================================
-   Base
+   Navigation
 ========================================================== */
 
-html {
-  scroll-behavior: smooth;
-}
+.glass-nav{
 
-body {
-  background:
-    radial-gradient(circle at top left, rgba(34,197,94,.08), transparent 35%),
-    radial-gradient(circle at top right, rgba(14,165,233,.08), transparent 35%),
-    var(--paper);
+  background:rgba(255,255,255,.85);
 
-  color: var(--ink);
-  font-family: var(--font-body);
+  backdrop-filter:blur(18px);
 
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
+  -webkit-backdrop-filter:blur(18px);
 
-::selection {
-  background: rgba(34,197,94,.25);
-  color: white;
+  border-bottom:1px solid var(--border);
+
 }
 
 /* ==========================================================
-   Reduced Motion
+   Cards
 ========================================================== */
 
-@media (prefers-reduced-motion: reduce) {
-  html {
-    scroll-behavior: auto;
-  }
+.card{
 
-  *,
-  *::before,
-  *::after {
-    animation-duration: .01ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: .01ms !important;
-  }
-}
+  background:var(--surface);
 
-/* ==========================================================
-   Glass Navigation
-========================================================== */
+  border:1px solid var(--border);
 
-.glass-nav {
-  background: rgba(11,18,32,.78);
-  backdrop-filter: blur(18px) saturate(180%);
-  -webkit-backdrop-filter: blur(18px) saturate(180%);
-  border-bottom: 1px solid var(--border);
-}
-
-/* ==========================================================
-   Small Controls
-========================================================== */
-
-.neu-control {
-  background: rgba(255,255,255,.04);
-
-  border: 1px solid var(--border);
-
-  color: white;
+  border-radius:24px;
 
   box-shadow:
-    0 8px 30px rgba(0,0,0,.35);
+      0 1px 2px rgba(0,0,0,.04),
+      0 12px 30px rgba(0,0,0,.05);
 
-  transition:
-    transform .25s ease,
-    background .25s ease,
-    box-shadow .25s ease;
 }
 
-.neu-control:hover {
-  background: rgba(255,255,255,.08);
-  transform: translateY(-2px);
+/* ==========================================================
+   Small controls
+========================================================== */
+
+.neu-control{
+
+  background:white;
+
+  border:1px solid var(--border);
 
   box-shadow:
-    0 14px 40px rgba(0,0,0,.4);
+      0 1px 2px rgba(0,0,0,.05);
+
 }
 
-.neu-control:focus-visible {
-  outline: 2px solid var(--primary);
-  outline-offset: 2px;
-}
+.neu-control:hover{
 
-/* ==========================================================
-   Enterprise Cards
-========================================================== */
+  background:#F8F8F8;
 
-.clay-badge {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(255,255,255,.06),
-      rgba(255,255,255,.03)
-    );
-
-  border: 1px solid var(--border);
-
-  border-radius: 24px;
-
-  box-shadow:
-    0 12px 40px rgba(0,0,0,.28);
 }
 
 /* ==========================================================
-   Manifest Lines
+   Manifest
 ========================================================== */
 
-.manifest-line {
-  border-bottom: 1px solid rgba(255,255,255,.08);
+.manifest-line{
 
-  transition:
-    background .25s ease,
-    border-color .25s ease;
+  border-bottom:1px solid var(--border);
+
+  transition:.25s;
+
 }
 
-.manifest-line:hover,
-.manifest-line:focus-within {
-  background: rgba(255,255,255,.03);
-  border-color: rgba(34,197,94,.25);
-}
+.manifest-line:hover{
 
-.manifest-line:last-child {
-  border-bottom: none;
+  background:#FAFAFA;
+
 }
 
 /* ==========================================================
-   Bento Grid
+   Badge
 ========================================================== */
 
-.bento-grid {
-  display: grid;
-  gap: 1rem;
-  grid-template-columns: repeat(12, 1fr);
-}
+.clay-badge{
 
-@media (max-width:768px) {
-  .bento-grid {
-    grid-template-columns: 1fr;
-  }
-}
+  background:#F8FAF8;
 
-/* ==========================================================
-   Typography
-========================================================== */
+  border:1px solid var(--border);
 
-.stamp-mark {
-  font-family: var(--font-display);
-  letter-spacing: .08em;
-  text-transform: uppercase;
-}
+  border-radius:18px;
 
-/* ==========================================================
-   Pulse
-========================================================== */
-
-@keyframes subtle-pulse {
-  0%,100% {
-    opacity:1;
-    transform:scale(1);
-  }
-
-  50% {
-    opacity:.55;
-    transform:scale(1.03);
-  }
-}
-
-.animate-pulse {
-  animation: subtle-pulse 2.4s ease-in-out infinite;
 }
 
 /* ==========================================================
@@ -206,39 +139,66 @@ body {
 
 input,
 textarea,
-select {
-  background: rgba(255,255,255,.03);
-  border: 1px solid var(--border);
-  color: white;
+select{
+
+  background:white;
+
+  border:1px solid var(--border);
+
 }
 
-input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
-  outline: none;
-  border-color: var(--primary);
+input:focus,
+textarea:focus,
+select:focus{
 
-  box-shadow:
-    0 0 0 4px rgba(34,197,94,.18);
+  outline:none;
+
+  border-color:var(--primary);
+
+  box-shadow:0 0 0 4px rgba(20,83,45,.10);
+
+}
+
+/* ==========================================================
+   Typography
+========================================================== */
+
+.stamp-mark{
+
+  font-family:var(--font-display);
+
+  letter-spacing:.14em;
+
+  text-transform:uppercase;
+
+  color:var(--text-muted);
+
+}
+
+/* ==========================================================
+   Selection
+========================================================== */
+
+::selection{
+
+  background:rgba(20,83,45,.15);
+
 }
 
 /* ==========================================================
    Scrollbar
 ========================================================== */
 
-::-webkit-scrollbar {
-  width: 10px;
+::-webkit-scrollbar{
+
+  width:10px;
+
 }
 
-::-webkit-scrollbar-track {
-  background: var(--paper);
-}
+::-webkit-scrollbar-thumb{
 
-::-webkit-scrollbar-thumb {
-  background: #334155;
-  border-radius: 999px;
-}
+  background:#C7C7CC;
 
-::-webkit-scrollbar-thumb:hover {
-  background: #475569;
+  border-radius:999px;
+
 }
