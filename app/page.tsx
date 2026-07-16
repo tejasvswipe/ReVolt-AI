@@ -157,9 +157,9 @@ export default function Home() {
             <p className="font-display text-[11px] text-steel">
               © 2026 ReVolt AI. All rights reserved. Ref: RVLT-WEB-2026
             </p>
-            <p className="font-display text-[16px] text-steel">
-              "ISO 27001-Aligned · NIST 800-88 · DPDP Act Ready" → "Building toward ISO 27001 · NIST 800-88 aligned · DPDP Act aware"
-            </p>
+            <p className="font-display text-[11px] text-steel">
+  Building toward ISO 27001 · NIST 800-88 aligned · DPDP Act aware
+           </p>
           </div>
         </div>
       </footer>
